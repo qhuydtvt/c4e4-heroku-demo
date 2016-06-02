@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello C4E'
+    return render_template("index.html", movie_list = Movie.objects)
 
 @app.route("/giang")
 def hello_giang():
